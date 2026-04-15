@@ -1,13 +1,19 @@
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 import HeroText from "@/components/HeroText";
-import WorkSection from "@/components/WorkSection";
+import Navigation from "@/components/Navigation";
+import Services from "@/components/Services";
+import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <main className="flex min-h-[100dvh] flex-col bg-[#0a0a0a]">
-      <div className="relative min-h-[100dvh] w-full flex-1 min-h-0">
-        <HeroText />
-      </div>
-      <WorkSection />
+    <main>
+      <Navigation />
+      <HeroText />
+      <Services />
+      <Work />
+      <About />
+      <Contact />
     </main>
   );
 }

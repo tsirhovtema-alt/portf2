@@ -303,6 +303,7 @@ export default function HeroText() {
 
   return (
     <section
+      id="hero"
       className="relative h-[100dvh] min-h-[100dvh] w-full overflow-hidden"
       style={{ background: "#0a0a0a" }}
     >
