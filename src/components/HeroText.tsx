@@ -130,8 +130,9 @@ export default function HeroText() {
     oc.fillText("WEB", W / 2, sqY + sqSize * 0.5);
     oc.fillText("TERA", W / 2, sqY + sqSize * 0.82);
 
-    const gap = W < 640 ? 5 : 4;
-    const pSize = W < 640 ? 0.5 : 0.6;
+    const isMobile = W < 640;
+    const gap = isMobile ? 4 : 4;
+    const pSize = isMobile ? 0.7 : 0.6;
     const img = oc.getImageData(0, 0, W, H).data;
     const list: Particle[] = [];
 
@@ -208,7 +209,12 @@ export default function HeroText() {
 
         p.timer -= 1;
         if (p.timer <= 0) {
-          p.alphaTarget = Math.random() > 0.2 ? 0.5 + Math.random() * 0.5 : 0;
+          if (isMobile) {
+            /* На телефоне не гасим частицы полностью, чтобы надпись оставалась читаемой */
+            p.alphaTarget = 0.65 + Math.random() * 0.35;
+          } else {
+            p.alphaTarget = Math.random() > 0.2 ? 0.5 + Math.random() * 0.5 : 0;
+          }
           p.nextShape = rndShape();
           p.timer = p.interval + Math.floor(Math.random() * 60);
         }
