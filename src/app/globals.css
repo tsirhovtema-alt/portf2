@@ -137,3 +137,18 @@
     pointer-events: none;
   }
 }
+
+@keyframes hero-scroll-dot {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
