@@ -1,0 +1,50 @@
+.cls1 {
+  fill: #e5e5e5;
+  stroke-width: 0px;
+  animation: cls1 4s ease infinite both;
+}
+
+.cls2 {
+  fill: #888888;
+  stroke-width: 0px;
+  animation: cls2 4s ease infinite both;
+}
+
+.cls3 {
+  fill: #bbbbbb;
+  stroke-width: 0px;
+  animation: cls3 4s ease infinite both;
+}
+
+@keyframes cls1 {
+  0%   { fill: #e5e5e5; }
+  34%  { fill: #aaaaaa; }
+  66%  { fill: #cccccc; }
+  100% { fill: #e5e5e5; }
+}
+
+@keyframes cls2 {
+  0%   { fill: #888888; }
+  34%  { fill: #e5e5e5; }
+  66%  { fill: #aaaaaa; }
+  100% { fill: #888888; }
+}
+
+@keyframes cls3 {
+  0%   { fill: #bbbbbb; }
+  34%  { fill: #888888; }
+  66%  { fill: #e5e5e5; }
+  100% { fill: #bbbbbb; }
+}
+
+.triangle {
+  height: 200px;
+  width: 200px;
+  animation: triangle 4s both infinite;
+}
+
+@keyframes triangle {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(12px); }
+  100% { transform: translateY(0px); }
+}
