@@ -185,6 +185,7 @@ export default function HeroText() {
       if (!visible) return;
 
       ctx.clearRect(0, 0, cssW.current || canvas.width, cssH.current || canvas.height);
+      const isMobile = (cssW.current || window.innerWidth) < 640;
       const mx = mouse.current.x;
       const my = mouse.current.y;
 

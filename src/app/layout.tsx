@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import CustomCursor from "@/components/CustomCursor";
 import LoadingScreen from "@/components/LoadingScreen";
 import "./globals.css";
 
@@ -28,9 +29,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="grain min-h-full flex flex-col">
         <LoadingScreen />
-        <div className="noise-overlay" aria-hidden="true" />
+        <CustomCursor />
         {children}
       </body>
     </html>
